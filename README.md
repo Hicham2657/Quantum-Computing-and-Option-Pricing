@@ -10,19 +10,19 @@ This repository contains a Qiskit implementation that prices a European call opt
 
 The course is split into four lectures. Each lecture builds directly on the previous one:
 
-[**Lecture 1**: Postulates of quantum mechanics](./lecture1.pdf)
+[**Lecture 1**](./lecture1.pdf): Postulates of quantum mechanics
 
-[**Lecture 2**: Quantum computing](./lecture2.pdf)
+[**Lecture 2**](./lecture2.pdf): Quantum computing
 
-[**Lecture 3**: Quantum pricing I](./lecture3.pdf)
+[**Lecture 3**:](./lecture3.pdf) Quantum pricing I
 
-[**Lecture 4**: Quantum pricing II](./lecture4.pdf)
+[**Lecture 4**:](./lecture4.pdf) Quantum pricing II
 
 ---
 
 ### The project
 
-The notebook ```quantum_pricing.ipynb``` (./quantum_pricing.ipynb) implements the full pipeline described in lectures 3 and 4, structured as follows:
+The notebook [```quantum_pricing.ipynb```] (./quantum_pricing.ipynb) implements the full pipeline described in lectures 3 and 4, structured as follows:
 
 
 **1. Classical baseline**
