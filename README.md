@@ -1,4 +1,4 @@
-# Quantum-Computing-and-Option-Pricing
+# Quantum Computing and Option Pricing
 
 A project completed for the Quantum Computing and Option Pricing course taught by Mnacho Echenim at Ensimag (2026).
 
@@ -12,11 +12,11 @@ The course is split into four lectures. Each lecture builds directly on the prev
 
 **Lecture 1**: Postulates of quantum mechanics
 
-**Lecture 2** — Quantum computing
+**Lecture 2**: Quantum computing
 
-**Lecture 3** — Quantum pricing (I)
+**Lecture 3**:Quantum pricing (I)
 
-**Lecture 4** — Quantum pricing (II)
+**Lecture 4**: Quantum pricing (II)
 
 ---
 
@@ -49,6 +49,6 @@ The notebook ```quantum_pricing.ipynb``` implements the full pipeline described 
 - This estimate is rescaled to recover the expected (undiscounted) payoff, and compared against the classical Black-Scholes value
 
 
-**5. Results**
+### Result
 
 With only 7 iterations of amplitude estimation, the pipeline reaches a relative error under 0.3%: a level of accuracy that would require several thousand classical Monte Carlo samples to match, concretely illustrating the quadratic speedup of QAE over classical sampling
