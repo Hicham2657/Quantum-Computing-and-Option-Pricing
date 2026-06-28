@@ -22,7 +22,7 @@ The course is split into four lectures. Each lecture builds directly on the prev
 
 ### The project
 
-The notebook [```quantum_pricing.ipynb```] (./quantum_pricing.ipynb) implements the full pipeline described in lectures 3 and 4, structured as follows:
+The notebook [```quantum_pricing.ipynb```](./quantum_pricing.ipynb) implements the full pipeline described in lectures 3 and 4, structured as follows:
 
 
 **1. Classical baseline**
