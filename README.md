@@ -29,36 +29,15 @@ The course is split into four lectures. Each lecture builds directly on the prev
 
 ### The project
 
-The goal of this project is to design a quantum circuit that leverages the Quantum Amplitude Estimation algorithm to approximate the price of a call option. More precisely, given a call option with strike $K$ and maturity $T$ on an underlying $S$ with volatility $\sigma$, the goal of this project is to design a circuit that constructs a state of the form $$\sqrt{1-a}\left(|\Psi_0\rangle_n \otimes |1\rangle\right) + \sqrt{a}\left(|\Psi_1\rangle_n \otimes |1\rangle\right)$$
+The goal of this project is to design a quantum circuit that leverages the Quantum Amplitude Estimation algorithm to approximate the price of a call option. More precisely, given a call option with strike $K$ and maturity $T$ on an underlying $S$ with volatility $\sigma$, the goal of this project is to design a circuit that constructs a state of the form 
+
+$$\sqrt{1-a}\left(|\Psi_0\rangle_n \otimes |1\rangle\right) + \sqrt{a}\left(|\Psi_1\rangle_n \otimes |1\rangle\right)$$
+
 such that $a$ is an approximation of $\mathbb{E}\left[(S_T - K)_+\right]$. The Quantum Estimation Algorithm is then used to estimate the value of $a$, which represents the compounded price of the call option.
 
 The notebook [```quantum_pricing.ipynb```](./quantum_pricing.ipynb) implements the full pipeline described in lectures 3 and 4.
 
 
-**1. Classical baseline**
-
-- Closed-form Black-Scholes price of a European call
-- Classical Monte Carlo estimator of the (compounded) price, for comparison
-
-
-**2. Encoding a probability distribution**
-
-- The log-normal distribution of the terminal asset price $S_T$ is discretized onto a grid of $2^n$ points
-- A circuit of cascaded controlled Ry rotations exactly mirroring the recursive construction from Lecture 3
-
-
-**3. Encoding the payoff**
-
-- The call payoff $(S_T − K)_+$ is rewritten as a piecewise linear function and approximated through a sine squared encoding (Lecture 4)
-- A comparator circuit flags whether the discretized price index is above or below the strike
-
-
-**4. Putting it all together**
-
-- The distribution circuit, the comparator, and the two affine-function circuits are composed into a single circuit (```qc_pricer```)
-- This estimate is rescaled to recover the expected (undiscounted) payoff, and compared against the classical Black-Scholes value
-
-
 ### Result
 
-With only 7 iterations of amplitude estimation, the pipeline reaches a relative error under 0.3%: a level of accuracy that would require several thousand classical Monte Carlo samples to match, concretely illustrating the quadratic speedup of QAE over classical sampling
+With only 7 iterations of amplitude estimation, the pipeline reaches a relative error under 0.3%: a level of accuracy that would require several thousand classical Monte Carlo samples to match, concretely illustrating the quadratic speedup of QAE over classical sampling.
