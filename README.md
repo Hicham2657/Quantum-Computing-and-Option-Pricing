@@ -1,3 +1,6 @@
+<img width="1634" height="553" alt="image" src="./banner/banner.png" />
+
+
 # Quantum Computing and Option Pricing
 
 A project completed for the Quantum Computing and Option Pricing course taught by Mnacho Echenim at Ensimag (2026).
