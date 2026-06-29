@@ -8,6 +8,13 @@ This repository contains a Qiskit implementation that prices a European call opt
 
 ### Course Overview
 
+
+The goal of this class is twofold:
+
+- First, present some of the fundamental notions of quantum computing, including the postulates of quantum mechanics, the circuit representation of quantum algorithms and some results on quantum advantages.
+- Second, investigate how quantum computing can be applied to solve a concrete problem, specifically the pricing of a financial option.
+At the end of the class, students should be familiar with core concepts of quantum computing as well as the **Qiskit** software development kit, and have a clearer view of the potential and current limits of quantum computing.
+
 The course is split into four lectures. Each lecture builds directly on the previous one:
 
 [**Lecture 1**](./lecture1.pdf): Postulates of quantum mechanics
@@ -22,7 +29,10 @@ The course is split into four lectures. Each lecture builds directly on the prev
 
 ### The project
 
-The notebook [```quantum_pricing.ipynb```](./quantum_pricing.ipynb) implements the full pipeline described in lectures 3 and 4, structured as follows:
+The goal of this project is to design a quantum circuit that leverages the Quantum Amplitude Estimation algorithm to approximate the price of a call option. More precisely, given a call option with strike $K$ and maturity $T$ on an underlying $S$ with volatility $\sigma$, the goal of this project is to design a circuit that constructs a state of the form $$\sqrt{1-a}\left(|\Psi_0\rangle_n \otimes |1\rangle\right) + \sqrt{a}\left(|\Psi_1\rangle_n \otimes |1\rangle\right)$$
+such that $a$ is an approximation of $\mathbb{E}\left[(S_T - K)_+\right]$. The Quantum Estimation Algorithm is then used to estimate the value of $a$, which represents the compounded price of the call option.
+
+The notebook [```quantum_pricing.ipynb```](./quantum_pricing.ipynb) implements the full pipeline described in lectures 3 and 4.
 
 
 **1. Classical baseline**
